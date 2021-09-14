@@ -1,0 +1,302 @@
+%\documentclass[12pt,a4paper,ngerman]{moderncv}
+\documentclass[11pt,a4paper,ngerman,sans]{moderncv}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+% Helvetica font
+\usepackage[scaled]{helvet}
+\usepackage{ragged2e}
+\usepackage{relsize}
+% customize the enumerate environments (i.e. enumerate, itemize, ...)
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% A custom version of the \cventry command that supports large itemized lists
+% inside argument #7 (the custom cvitemize lists should be used!)
+\newcommand*{\cventrylong}[7][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+    \raggedleft\hintstyle{#2} &{%
+        {\bfseries#3}%
+        \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+        \ifthenelse{\equal{#5}{}}{}{, #5}%
+        \ifthenelse{\equal{#6}{}}{}{, #6}%
+    }%
+  \end{tabular}%
+  {\small#7}%
+  \par\addvspace{#1}}
+
+% A custom version of the itemize environment that sets the appropriate left
+% margin for use inside \cventylong
+\newlist{cvitemize}{itemize}{1}
+\setlist[cvitemize]{label=\labelitemi,%
+leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
+
+\setcounter{secnumdepth}{0}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\special{papersize=\the\paperwidth,\the\paperheight}
+\newcommand{\noun}[1]{\textsc{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+%C++
+% \newcommand\CC{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\relsize{-3}{\textbf{+}}}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\relsize{-3}{\textbf{+}}}}
+\newcommand\CC{\texttt{C}\nolinebreak[4]\hspace{-.05em}\raisebox{.3ex}{\relsize{-3}{\textbf{++}}}}
+
+\renewcommand\familydefault{\sfdefault} 
+
+%\definecolor{porange}{rgb}{0.9333, 0.6352, 0.2118}
+% required
+\moderncvcolor{mrc}
+\moderncvtheme[mrc]{classic}
+%\moderncvtheme[grey]{classic}
+% possible themes are "classic" and "casual"
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% required
+\firstname{Marc}
+% required
+\familyname{Jakobi}
+
+% optional, remove the line if not wanted
+% \title{born 1989-04-18 in Filderstadt}
+\title{Curriculum Vitae}
+
+% optional
+% \address{street and number}{postcode city}
+% '\\' adds a line break
+\address{Etzbergstrasse 15}{8405 Winterthur, Switzerland}
+
+% optional
+%\phone{+49(0)30 XXXX XXXX} 
+% TODO get home phone number
+% optional
+\mobile{+49 1573 5757 182}
+% optional
+%\fax{+49(0)30 5019-48-3647}%
+% optional
+\email{mrcjkb89@outlook.com}
+% optional
+\extrainfo{github.com/MrcJkb}
+
+% optional
+% \photo[height]{name}
+% 'height' is the height the picture is resized to
+% 'name' is the name of the picture file
+\photo[70pt]{CV_photo.jpg}
+
+% optional
+\quote{Software innovations for the renewable energy sector}
+
+\makeatother
+\begin{document}
+
+% ------------- Cover letter --------------
+
+% \clearpage
+
+% \recipient{HR Department}{Sympower\\Prinsengracht 437-A\\1016 HM – Amsterdam, The Netherlands} % Letter recipient
+% \date{\today} % Letter date
+% \opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Sincerely yours,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+% \makelettertitle % Print letter title
+% % \justify
+% I was recently contacted regarding a job opening at Sympower. Although I am not actively looking for a new position, your vision seems very similar to mine, which has encouraged me to send you this application.
+% \section{About me}
+% My educational background is in renewable energies. During my Master's degree, I specialised in solar PV, battery storage, and sector coupling (renewable thermal energy and eMobility). My Bachelor's additionally included wind and hydro power.
+% Early on in my studies, I started working part-time in a research group, with a focus on forecasting, energy management, and simulation (primarily using \texttt{Matlab}). 
+% It was then that I discovered my passion for software development, and started diving deeper, using literature to teach myself various programming languages and design patterns. 
+% After my studies, I started my current job: Developing simulation software for sector-coupled renewable energy systems (desktop and SaaS applications).
+% As we are a small team, my responsibilities cover the full stack: 
+% Requirement analysis, design, rapid prototyping, front and back end development, code reviews, CI/CD, 3rd level support, to name a few. 
+% With the skill set I have gathered, my team members now consider me a senior developer. 
+% \newline
+% At work, I mostly use \texttt{Java} and \texttt{Python}, with a little bit of \texttt{Kotlin}. 
+% Privately, I prefer \texttt{Haskell} and \texttt{Rust}. My coding style is mostly functional (fluent and monadic) and partly test-driven, with a high degree of automation in enforcing architectural rules (where practical). 
+% Although I currently develop proprietary software professionally, I am a strong advocate for FOSS, and sharing libraries with the community whenever possible. 
+% Despite being passionate about my work, and educating myself with literature daily,  work life balance is very important to me. 
+% To ensure my physical and mental well-being, I adhere to a strict sports schedule.  
+% \section{Why Sympower?}
+% I already consider myself very lucky to be able to combine two of my passions professionally. However, I do feel the desire for greater challenges, and a greater degree of freedom in choosing my tech stack. Therefore, I am open to new opportunities. What has motivated me to send this application to you is my strong passion for renewable energies and the fact that \emph{I want to continue working in this field.}. Since high level software engineering is rather rare in that domain, I do not want to miss out on the opportunity to at least get to know you.
+% \newline
+% That being said, due to the fact that my wife and I live and work in Switzerland, my salary expectations are higher than what is common in the EU: In the range of EUR~90..100k, based on 33~h/week.
+% If you too think that we could be a great match, and would like to get to know me, please do not hesitate to contact me.
+% \newline
+% \newline
+% \makeletterclosing % Print letter signature
+
+% \newpage
+
+% ------------------- CV -------------------
+
+\maketitle
+
+\section{Professional career}
+
+\cventry{2017\textendash current}{Software engineer}{Vela Solaris AG}{}{}
+{
+	\textbf{\emph{Polysun Simulation Software}} \emph{(desktop app written in \texttt{Java})}
+  \begin{itemize}
+    \item Simulation models: Batteries, PV/PVT, controllers, thermal components 
+      (heat pumps, storage tanks, co-generators, etc.), eMobility.
+      \emph{Examples: Implementation of a new battery model; control algorithms for PV, batteries and heat pumps. Improvement of existing models.}
+    \item Plugins (e.g. for co-simulations with \texttt{Python}/\texttt{Matlab}/PLC controllers).
+    \item Charting, reporting.
+    \item Licensing.
+    \item RDBMS (HyperSQL)
+    \item UI (Mostly Swing, some JavaFX).
+    \item Refactoring
+    \item Code reviews (Bitbucket).
+    \item 3rd level support.
+    \item Publications/Presentations/Advanced workshops (e.g. at conferences).
+      \\
+  \end{itemize}
+	\textbf{\emph{Polysun BIM}} 
+  \\
+	\emph{Description: Automation of engineering workflows in the building sector; 
+	data exchange with other applications.}
+  \begin{itemize}
+    \item Customer interviews / requirement analysis.
+    \item Rapid prototyping (interactive \texttt{Python/QT} mock-ups) + concept validation with pilot customers.
+    \item Roadmap planning.
+    \item Software engineering/development:
+      \begin{itemize}
+        \item \emph{Desktop app with a modular bundle architecture} 
+          (\texttt{Java}, \texttt{Kotlin}, Hibernate (H2), Vavr, ReactiveX, Protocol Buffers, ArchUnit).
+        \item \emph{Cloud platform (back end), microservice architecture} (Spring Boot 2, Kafka Streams, MongoDB, Graphwalker) - \emph{currently on hold}.
+          \\
+      \end{itemize}
+  \end{itemize}
+  \textbf{\emph{Infrastructure}}
+  \begin{itemize}
+    \item CI/CD: Jenkins pipelines (Docker Swarm on AWS), e2e testing, release automation, setup/maintenance).
+    \item Maintenance of Docker containers.
+    \item Internal cloud infrastructure (e.g., license migration, sales automation, ...) - \emph{Apache Camel}.	
+    \item Development of CLI applications (\texttt{Haskell}, \texttt{Python})
+    \item Internal IT.
+      \\
+  \end{itemize}
+  \textbf{\emph{Development environment}}
+  \begin{itemize}
+    \item OS: Arch Linux.
+    \item Preferred editor: NeoVim 0.5 + language servers
+    \item Containerisation: Docker Compose.
+  \end{itemize}
+}
+{}
+
+
+\cventry{2014\textendash 2017}{Research assistant}{Projects: \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pv-store/}{PVstore}, \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/twinpower/}{TwinPower}}{HTW Berlin}{}{Optimisation of PV systems with batteries and heat pumps. Implementation of simulation models in \texttt{Matlab}.}{}
+
+\cventry{2013\textendash 2014}{Research assistant \& intern}{\href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pvprog/}{Project: PVprog}}{HTW Berlin}{}{Development of forecast-based operational strategies for PV storage systems.}{}
+
+\clearpage
+\section{Education}
+
+\cventry{2016\textendash 2017}{Master of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{Completion of Master's Thesis in the research group ''solar storage systems'' (Thesis and oral examination: 1.0 / studies: 1.2 [with honours]), HTW Berlin.}{}
+
+\cventry{2012\textendash 2016}{Bachelor of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{Completion of Bachelor's Thesis in the research group ''solar storage systems'' (Thesis and oral examination: 1.0 / studies: 1.3 [with honours]), HTW Berlin.}{}
+
+\cventry{2006\textendash 2009}{A levels}{Freie Waldorfschule Saar-Hunsrück}{Walhausen}{Grade: 2.1}{}{}
+
+\section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Master's Thesis}}
+
+\cvitem{Title}{\emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Development of model-based control applications compliant with IEC~61499 for building energy systems with a focus on photovoltaics}}}
+
+\vspace{0cm}
+
+
+\cvitem{Supervision}{Prof. Dr.-Ing. Volker Quaschning, M. Sc. Tjarko Tjaden}
+
+\cvitem{Grade}{Thesis and oral examination: 1.0 / studies: 1.2}
+
+\cvitem{Short summary}{Development of intelligent control applications for PV, battery and heat pump systems in compliance with IEC~61499. Development of communication interfaces for simulation tools such as Polysun and Matlab. Validation via co-simulations. Extension of the runtime environment (4diac-RTE) with a REST communication interface and set-up of a field test.}
+\section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{Bachelor's Thesis}}
+
+\cvitem{Title}{\emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{Optimierung der Netzeinspeisung von deutschlandweit verteilten PV-Speichersystemen mit prognosebasierten Betriebsstrategien}}}
+
+\vspace{0cm}
+
+\cvitem{Supervision}{Prof. Dr.-Ing. Volker Quaschning, M. Sc. Johannes Weniger}
+
+\cvitem{Grade}{Thesis and oral examination: 1.0 / studies: 1.3}
+
+\cvitem{Short summary}{Modelling and CUDA-simulation of 46126 Germany-wide distributed PV storage systems. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
+
+\section{Other experience}
+
+\cventry{2016}{Intern/project work}{}{Vela Solaris AG}{Winterthur}{Implementation and validation of the PVprog algorithm in Polysun.}
+
+\cventry{2011}{Temp}{}{Brose Fahrzeugteile GmbH; Leuwico GmbH}{Coburg}{Assembly, manufacture}
+
+\cventry{2011}{Intern}{}{Lasco Umformtechnik GmbH}{Coburg}{Montage, inspection, mechanical workshop}
+
+\cventry{2009\textendash 2010}{Social service}{}{REHA GmbH}{Neunkirchen}{}
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Mother tongue}{}
+
+\cvitemwithcomment{German}{Mother tongue}{}
+
+\cvitemwithcomment{French}{Good knowledge}{School, grades 7-13; regular. visits to France and Morocco}
+
+\clearpage
+\section{Professional skills}
+
+\cvitemwithcomment{Programming}{\texttt{Haskell}, \texttt{Kotlin}, \texttt{Java}, \texttt{Python}, \texttt{Rust}, \CC, \texttt{Matlab}, Linux, PLC (\texttt{IEC~61499})}{}
+
+\cvitemwithcomment{Tech stack}{Git, Subversion, Docker (compose/swarm), Jenkins, Apache Kafka (Streams), Protobuf,}{}
+\cvitemwithcomment{}{NeoVim, Gradle, Make, Atlassian, AWS, Spring Boot, Apache Camel, Hibernate,}{}
+\cvitemwithcomment{}{RDBMS}{}
+
+\cvitemwithcomment{Simulation}{Polysun, Simulink, TRNSYS}{}{}
+
+\cvitemwithcomment{Scientific documentation}{\noun{\LaTeX{}}, pandoc}{}{}
+
+\cvitemwithcomment{Linux}{Administration}{System setup, networking, Shell scripting, Arch Linux, AMI Linux, Debian}
+
+\cvitemwithcomment{Windows/MacOS}{Administration}{System setup, networking, software management}
+
+
+\section{Leisure-time activities}
+
+\cvitem{Sports}{{\small{}Running, rugby, cycling, HIIT, hiking}}
+
+
+\section{Professional interests}
+
+\cvitem{Renewable energies}{Photovoltaics, batteries, thermal systems, eMobility, sector coupling}
+
+\cvitem{Software development}{FOSS/Linux development, Trade literature}
+
+
+\section{Publications}
+
+\cvitem{Conference paper}{Jakobi, M.; Kunath, L.; Witzig, A. \emph{\href{https://proceedings.ises.org/paper/eurosun2018/eurosun2018-0147-Jakobi.pdf}{BIM use-case: Model-based performance optimization.}} EuroSun international conference on solar energy for buildings and industry, Rapperswil, 2018.}
+
+\cvitem{Conference paper}{Jakobi, M.; Stöckli, U.; Tjaden, T.; Quaschning, Q. \emph{\href{http://proceedings.ises.org/paper/eurosun2018/eurosun2018-0151-Jakobi.pdf}{From simulation to reality: IEC 61499 compliant control applications for solar energy systems.}} EuroSun international conference on solar energy for buildings and industry, Rapperswil, 2018.}
+
+\cvitem{Conference paper}{Jakobi, M.; Stöckli, U.; Tjaden, T.; Quaschning, Q. \emph{\href{https://www.velasolaris.com/wp-content/uploads/2018/12/20180504_publikation_symposiumpv18_jakobi.pdf}{Von der Simulation zur Realität: IEC 61499 konforme Regelanwendungen für Solare Energiesysteme.}} Symposium photovoltaische Solarenergie, Bad Staffelstein, 2018.}
+
+\cvitem{Thesis}{Jakobi, M.: \emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Development of model-based control applications compliant with IEC~61499 for building energy systems with a focus on photovoltaics.}} Master's thesis, Hochschule für
+	Technik und Wirtschaft, Berlin, 2017.}
+
+\cvitem{Thesis}{Jakobi, M.: \emph{\href{http://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{\textit{Optimierung des Netzeinspeiseverhaltens von deutschlandweit verteilten PV-Speichersystemen mit prognosebasierten Betriebsstrategien.}}} Bachelor's thesis, Hochschule für
+Technik und Wirtschaft, Berlin, 2016.}
+
+\cvitem{Data \& code}{Jakobi, M.; Schmidt, M.; Anyangbe, F. \emph{\href{https://github.com/MrcJkb/lfpBattery/blob/master/Documentation/lfpBattery_Documentation.pdf}{Cell resolved Matlab OOP model of a lithium iron phosphate battery pack}}, TU Berlin, 2017.}
+
+\cvitem{Co-author}{Weniger, J.; Bergner, J.; Beier, D.; Jakobi, M.; Tjaden, T.; Quaschning,
+Q.: \emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/04/WENIGER-2015-Grid-Feed-in-Behavior-of-Distributed-PV-Battery-Systems.pdf}{Grid Feed-in Behavior of Distributed PV Battery Systems}}.
+30th European Photovoltaic Solar Energy Conference and Exhibition,
+Hamburg, 2015. }
+
+\end{document}
