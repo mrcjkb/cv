@@ -5,8 +5,8 @@
 \usepackage[T1]{fontenc}
 % adjust the page margins
 \usepackage[scale=0.85]{geometry}
-% Helvetica font
-\usepackage[scaled]{helvet}
+\usepackage[scaled]{helvet} % Helvetica font
+% \setmonofont{JetBrains Mono}[Contextuals=Alternate]
 \usepackage{ragged2e}
 \usepackage{relsize}
 % customize the enumerate environments (i.e. enumerate, itemize, ...)
@@ -76,13 +76,14 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 %\phone{+49(0)30 XXXX XXXX} 
 % TODO get home phone number
 % optional
-\mobile{+49 1573 5757 182}
+\mobile{+41 (0)79 458 04 77}
 % optional
 %\fax{+49(0)30 5019-48-3647}%
 % optional
-\email{mrcjkb89@outlook.com}
+\email{marc@jakobi.dev}
+\extrainfo{mrcjkb.dev}
 % optional
-\extrainfo{github.com/MrcJkb}
+\extrainfo{github.com/mrcjkb}
 
 % optional
 % \photo[height]{name}
@@ -91,7 +92,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \photo[70pt]{CV_photo.jpg}
 
 % optional
-\quote{Software innovations for the renewable energy sector}
+\quote{Renewable energy, Haskell/Nix, TDD}
 
 \makeatother
 \begin{document}
@@ -108,9 +109,10 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 % \makelettertitle % Print letter title
 % % \justify
-% I was recently contacted regarding a job opening at Sympower. Although I am not actively looking for a new position, your vision seems very similar to mine, which has encouraged me to send you this application.
+% XXX: Very outdated
+% I was recently contacted regarding a job opening at ...
 % \section{About me}
-% My educational background is in renewable energies. During my Master's degree, I specialised in solar PV, battery storage, and sector coupling (renewable thermal energy and eMobility). My Bachelor's additionally included wind and hydro power.
+% My educational background is in renewable energies. During my Master's degree, I specialised in solar PV, battery storage, and sector coupling (renewable thermal energy and eMobility).
 % Early on in my studies, I started working part-time in a research group, with a focus on forecasting, energy management, and simulation (primarily using \texttt{Matlab}). 
 % It was then that I discovered my passion for software development, and started diving deeper, using literature to teach myself various programming languages and design patterns. 
 % After my studies, I started my current job: Developing simulation software for sector-coupled renewable energy systems (desktop and SaaS applications).
@@ -140,21 +142,17 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \section{Professional career}
 
-\cventry{2017\textendash current}{Software engineer}{Vela Solaris AG}{}{}
+\cventry{2017\textendash 2022}{Software engineer}{Vela Solaris AG}{}{}
 {
 	\textbf{\emph{Polysun Simulation Software}} \emph{(desktop app written in \texttt{Java})}
   \begin{itemize}
     \item Simulation models: Batteries, PV/PVT, controllers, thermal components 
       (heat pumps, storage tanks, co-generators, etc.), eMobility.
       \emph{Examples: Implementation of a new battery model; control algorithms for PV, batteries and heat pumps. Improvement of existing models.}
-    \item Plugins (e.g. for co-simulations with \texttt{Python}/\texttt{Matlab}/PLC).
+    \item Plugins (e.g. for co-simulations with \texttt{Python}/\texttt{Matlab/Simulink}/PLC).
     \item Charting, reporting.
-    \item Licensing.
-    \item RDBMS (HyperSQL)
-    \item UI (Mostly Swing, some JavaFX).
-    \item Refactoring
+    \item UI. 
     \item Code reviews (Bitbucket).
-    \item 3rd level support.
     \item Publications/Presentations/Advanced workshops (e.g. at conferences).
       \\
   \end{itemize}
@@ -164,30 +162,22 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 	data exchange with other applications.}
   \begin{itemize}
     \item Customer interviews / requirement analysis.
-    \item Rapid prototyping (interactive \texttt{Python/QT} mock-ups) + concept validation with pilot customers.
+    \item Rapid prototyping (interactive mock-ups) + concept validation with pilot customers.
     \item Roadmap planning.
     \item Software engineering/development:
       \begin{itemize}
         \item \emph{Desktop app with a modular bundle architecture} 
-          (\texttt{Java}, \texttt{Kotlin}, Hibernate (H2), Vavr, ReactiveX, Protocol Buffers, ArchUnit).
-        \item \emph{Cloud platform (back end), microservice architecture} (Spring Boot 2, Kafka Streams, MongoDB, Graphwalker) - \emph{currently on hold}.
+          (\texttt{Java}, \texttt{Kotlin}, Hibernate (H2), Vavr, ReactiveX, Protobuf, ArchUnit).
+        \item \emph{Cloud platform (backend), microservice architecture} (Spring Boot 2, Kafka Streams, MongoDB, Graphwalker).
           \\
       \end{itemize}
   \end{itemize}
   \textbf{\emph{Infrastructure}}
   \begin{itemize}
-    \item CI/CD: Jenkins pipelines (Docker Swarm on AWS), e2e testing, release automation, setup/maintenance).
-    \item Maintenance of Docker images.
+    \item CI/CD: Jenkins, Docker Swarm on AWS, e2e testing, release automation
     \item Internal cloud infrastructure (e.g., license migration, sales automation, ...) - \emph{Apache Camel}.	
-    \item Development of CLI applications (\texttt{Haskell}, \texttt{Python})
-    \item Internal IT.
+    \item Development of internal CLI applications (\texttt{Haskell}, \texttt{Python})
       \\
-  \end{itemize}
-  \textbf{\emph{Development environment}}
-  \begin{itemize}
-    \item OS: Arch Linux.
-    \item Preferred editor: NeoVim 0.5 + language servers
-    \item Containerisation: Docker Compose.
   \end{itemize}
 }
 {}
