@@ -35,6 +35,7 @@
             # scheme-full, scheme-small, ...
             # See https://nixos.wiki/wiki/TexLive
             alejandra
+            texlab
             self.packages.${system}.texlive
             self.packages.${system}.xelatex
             biber
