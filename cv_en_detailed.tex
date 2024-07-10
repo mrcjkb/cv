@@ -47,6 +47,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 %C++
 % \newcommand\CC{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\relsize{-3}{\textbf{+}}}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\relsize{-3}{\textbf{+}}}}
 \newcommand\CC{\texttt{C}\nolinebreak[4]\hspace{-.05em}\raisebox{.3ex}{\relsize{-3}{\textbf{++}}}}
+\newcommand\C{\texttt{C}\nolinebreak[4]\hspace{-.05em}\raisebox{.3ex}{\relsize{-3}}}
 
 \renewcommand\familydefault{\sfdefault} 
 
@@ -137,39 +138,50 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cventry{2022\textendash current}{Backend developer}{tiko Energy Solutions AG}{}{} 
 {
+  Microservices mostly written in Haskell, built with Nix.\newline
+  \\
 	\textbf{\emph{Virtual power plant}}
   \begin{itemize}
     \item Redis, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
     \item Implementation of microservices written in Haskell
     \item Maintenance of a legacy monolith written in Java 21 + Scala 2.13
+    \\
   \end{itemize}
 	\textbf{\emph{Data pipelines}}
   \begin{itemize}
     \item MQTT, Kafka, Thrift, Protobuf, Avro, rocksDB-cloud, TimescaleDB
     \item Microservices written in Haskell
+    \\
   \end{itemize}
 	\textbf{\emph{Web servers}}
   \begin{itemize}
     \item Haskell (wai/warp)
+    \\
   \end{itemize}
 	\textbf{\emph{CI, Deployment}}
   \begin{itemize}
-    \item NixOps (Hydra, morph), Kubernetes, ArgoCD, Kustomize, Terraform, AWS, SOPS
+    \item NixOps (Hydra, morph), Kubernetes, ArgoCD, Kustomize, Terraform, AWS, SOPS, Dhall
     \item Release management
+    \\
   \end{itemize}
 	\textbf{\emph{Quality}}
   \begin{itemize}
     \item Propagated test (+ behaviour) driven development practices.
     \item Developed KVM-based integration tests using the 'nixosTest' framework.
+    \\
   \end{itemize}
 	\textbf{\emph{Monitoring, Alerting}}
   \begin{itemize}
     \item Zabbix, Prometheus
+    \item Oncall, Incident response
+    \\
   \end{itemize}
 }
 
 \cventry{2017\textendash 2022}{Software engineer}{Vela Solaris AG}{}{}
 {
+  Java 17, Kotlin, Docker Swarm, Gradle\newline
+  \\
 	\textbf{\emph{Polysun Simulation Software}} \emph{(desktop app written in \texttt{Java})}
   \begin{itemize}
     \item Simulation models: Batteries, PV/PVT, controllers, thermal components 
@@ -246,7 +258,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cvitem{Short summary}{Modelling and CUDA-simulation of 46126 Germany-wide distributed PV storage systems. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
 
-\section{Other experience}
+\section{Other}
 
 \cventry{2016}{Intern/project work}{}{Vela Solaris AG}{Winterthur}{Implementation and validation of the "PVprog" forcast-based control algorithm in Polysun.}
 
@@ -267,33 +279,49 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \clearpage
 \section{Professional skills}
 
-\cvitemwithcomment{Programming}{\texttt{Haskell}, \texttt{Kotlin}, \texttt{Java}, \texttt{Python}, \texttt{Rust}, \CC, \texttt{Matlab}, Linux, PLC (\texttt{IEC~61499})}{}
+\cvitemwithcomment{Programming languages}{
+  \texttt{Haskell},
+  \texttt{Nix},
+  \texttt{Rust},
+  \texttt{Kotlin},
+  \texttt{Java},
+  \texttt{Lua},
+  \texttt{Python},
+  \C,
+  \CC
+}{}
 
-\cvitemwithcomment{Tech stack}{Git, Subversion, Docker (compose/swarm), Jenkins, Apache Kafka (Streams), Protobuf,}{}
-\cvitemwithcomment{}{NeoVim, Gradle, Make, Atlassian, AWS, Spring Boot, Apache Camel, Hibernate,}{}
-\cvitemwithcomment{}{RDBMS}{}
+\cvitemwithcomment{Development environment}{
+  \texttt{Neovim},
+  \texttt{NixOS},
+  \texttt{tmux},
+  \texttt{Nushell},
+  \texttt{coreutils}
+}{}
 
 \cvitemwithcomment{Simulation}{Polysun, Simulink, TRNSYS}{}{}
 
-\cvitemwithcomment{Scientific documentation}{\noun{\LaTeX{}}, pandoc}{}{}
+\cvitem{Scientific documentation}{\noun{\LaTeX{}}, pandoc}{}
 
-\cvitemwithcomment{Linux}{Administration}{System setup, networking, Shell scripting, Arch Linux, AMI Linux, Debian}
+\section{Open source contributions}
 
-\cvitemwithcomment{Windows/MacOS}{Administration}{System setup, networking, software management}
-
+\cvitem{nixpkgs}{Maintainer of various packages and NixOS modules}
+\cvitem{nix-community}{Lua ecosystem}
+\cvitem{nvim-neorocks}{Revolutionising the Neovim plugin ecosystem}
+\cvitem{neovim}{Maintainer of various plugins for Haskell, Nix and Rust development}
 
 \section{Leisure-time activities}
 
-\cvitem{Sports}{{\small{}Running, rugby, cycling, HIIT, hiking}}
+\cvitem{Sports}{{\small{}Running, cycling, HIIT, hiking}}
 \cvitem{Cooking}{}
+\cvitem{Gardening}{}
 
 
 \section{Professional interests}
 
-\cvitem{Renewable energies}{Photovoltaics, batteries, thermal systems, eMobility, sector coupling}
+\cvitem{Renewable energiy}{Photovoltaics, batteries, thermal systems, eMobility, sector coupling}
 
-\cvitem{Software development}{FOSS/Linux development, Trade literature, \texttt{Haskell} enthusiast}
-
+\cvitem{Software development}{FOSS/Linux development, Trade literature}
 
 \section{Publications}
 
