@@ -1,8 +1,4 @@
-# My LaTeX CV
-
-> [!WARNING]
->
-> **This CV is currently very outdated**
+# My LaTeX CV (detailed)
 
 To build:
 
