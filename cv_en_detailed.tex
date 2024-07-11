@@ -11,6 +11,7 @@
 \usepackage{relsize}
 % customize the enumerate environments (i.e. enumerate, itemize, ...)
 \usepackage{enumitem}
+\usepackage{tikz}
 \setlist{nolistsep}
 
 % A custom version of the \cventry command that supports large itemized lists
@@ -26,6 +27,17 @@
   \end{tabular}%
   {\small#7}%
   \par\addvspace{#1}}
+
+\tikzset{
+    baseline,
+    inner sep=2pt,
+    minimum height=12pt,
+    rounded corners=2pt  
+}
+\newcommand{\code}[1]{\mbox{% added this percent
+    \ttfamily
+    \tikz \node[anchor=base,fill=black!12]{#1};% added this percent
+}}
 
 % A custom version of the itemize environment that sets the appropriate left
 % margin for use inside \cventylong
@@ -168,7 +180,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 	\textbf{\emph{Quality}\newline}
   \begin{itemize}
     \item Propagated test (+ behaviour) driven development practices.
-    \item Developed KVM-based integration tests using the 'nixosTest' framework.
+    \item Developed KVM-based integration tests using the \code{nixosTest} framework.
     \\
   \end{itemize}
 	\textbf{\emph{Monitoring, Alerting}\newline}
@@ -301,11 +313,12 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \texttt{Haskell},
   \texttt{Nix},
   \texttt{Rust},
+  \C,
+  \texttt{Scala},
   \texttt{Kotlin},
   \texttt{Java},
   \texttt{Lua},
   \texttt{Python},
-  \C,
   \CC
 }{}
 
@@ -315,7 +328,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \texttt{tmux},
   \texttt{Nushell},
   \texttt{coreutils}
-}{}
+}{I prefer to work in the terminal}
 
 \cvitemwithcomment{Simulation}{Polysun, Simulink, TRNSYS}{}{}
 
