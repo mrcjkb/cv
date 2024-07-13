@@ -1,4 +1,4 @@
-# My LaTeX CV (detailed)
+# My CV (detailed)
 
 To build:
 
