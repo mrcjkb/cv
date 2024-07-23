@@ -41,7 +41,22 @@
             biber
           ];
         };
-        packages = {
+        packages = rec {
+          default = cv-en-detailed;
+          cv-en-detailed = pkgs.stdenvNoCC.mkDerivation {
+              name = "marcs-cv-en-detailed";
+              src = self;
+              nativeBuildInputs = [
+                xelatex
+              ];
+              buildPhase = ''
+                runHook preBuild
+                mkdir -p $out
+                xelatex -papersize='A4' -halt-on-error cv_en_detailed.tex
+                install -Dm644 cv_en_detailed.pdf -t $out
+                runHook postBuild
+              '';
+          };
           texlive = pkgs.texlive.combine {
             inherit
               (pkgs.texlive)
