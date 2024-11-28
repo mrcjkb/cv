@@ -194,18 +194,15 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \cventry{2023\textendash current}{Open source volunteer}{20 \%}{}{} 
 {
   I spend 20 \% of my work week maintaining and contributing to various open source projects, e.g.:\newline
-  \newline
   \textbf{\emph{NixOS}}
   \begin{itemize}
     \item Maintainer of various packages and NixOS modules
     \item Co-maintainer of the Lua and Vim/Neovim ecosystems
-    \\
   \end{itemize}
   \textbf{\emph{Nvim-neorocks}}
   \begin{itemize}
     \item Innovating the Neovim plugin ecosystem
     \item Co-maintainer of the \code{rocks} package manager for Lua
-    \\
   \end{itemize}
   \textbf{\emph{Neovim}}
   \begin{itemize}
