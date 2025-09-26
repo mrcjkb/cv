@@ -150,12 +150,12 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cventry{2022\textendash current}{Backend developer}{tiko Energy Solutions AG}{}{} 
 {
-  Microservices mostly written in Haskell, built with Nix.\newline
+  Distributed systems (mostly Haskell), built with Nix.\newline
   (80 \% since 2023)\newline
   \\
   \textbf{\emph{Virtual power plant and IOT devices}}
   \begin{itemize}
-    \item Redis, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
+    \item Redis/Valkey, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
     \item Microservices written in Haskell
     \item Legacy monolith written in Java 21 + Scala 2.13
     \\
@@ -173,14 +173,16 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \end{itemize}
 	\textbf{\emph{CI, Deployment}}
   \begin{itemize}
-    \item Hydra, Morph, GitLab, Kubernetes, ArgoCD, Kustomize,\newline Terraform, AWS, SOPS, Dhall
+    \item Hydra, Morph, Colmena, GitLab, Kubernetes, ArgoCD, Kustomize,\newline Terraform, AWS,
+          SOPS, Dhall
     \item Release management
     \\
   \end{itemize}
 	\textbf{\emph{Quality}}
   \begin{itemize}
     \item Propagated behaviour driven development practices.
-    \item Introduced and developed KVM-based integration tests using the \code{nixosTest} framework.
+    \item Introduced and developed KVM-based integration tests of distributed systems
+          using the \code{nixosTest} framework.
     \\
   \end{itemize}
 	\textbf{\emph{Monitoring, Alerting}}
@@ -193,20 +195,21 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cventry{2023\textendash current}{Open source volunteer}{20 \%}{}{} 
 {
-  I spend 20 \% of my work week maintaining and contributing to various open source projects, e.g.:\newline
+  I spend 20 \% of my work week maintaining and contributing to various open source projects, for example:\newline
   \newline
-  \textbf{\emph{NixOS}}
+  \textbf{\emph{\href{https://nixos.org/}{NixOS}}}
   \begin{itemize}
     \item Maintainer of various packages and NixOS modules
-    \item Co-maintainer of the Lua and Vim/Neovim ecosystems
+    \item Member of the \href{https://github.com/orgs/NixOS/teams/neovim}{Neovim} and
+          \href{https://github.com/orgs/NixOS/teams/lua}{Lua} maintainer teams
     \\
   \end{itemize}
-  \textbf{\emph{Nvim-neorocks}}
+  \textbf{\emph{\href{https://opencollective.com/lumen-labs}{Lumen Labs}}}
   \begin{itemize}
-    \item Co-maintainer of the \code{Lux} package manager for Lua
+    \item Co-maintainer of the \href{https://lux.lumen-labs.org}{\code{Lux} package manager} for Lua
     \\
   \end{itemize}
-  \textbf{\emph{Neovim}}
+  \textbf{\emph{\href{https://neovim.io/}{Neovim}}}
   \begin{itemize}
     \item Core contributions
     \item Maintainer of various plugins for Haskell, Nix and Rust development
@@ -351,7 +354,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \texttt{tmux},
   \texttt{Nushell},
   \texttt{jj-vcs}
-}{I prefer to work in the terminal}
+}{UNIX is my IDE}
 
 \cvitemwithcomment{Simulation}{Polysun, Simulink, TRNSYS}{}{}
 
@@ -359,7 +362,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \section{Leisure-time activities}
 
-\cvitem{Sports}{{\small{}Running, cycling, HIIT, hiking}}
+\cvitem{Sports}{{\small{}Running, cycling, hiking}}
 \cvitem{Cooking}{}
 \cvitem{Gardening}{}
 
@@ -369,11 +372,12 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \cvitem{Renewable energiy}{Photovoltaics, batteries, thermal systems, eMobility, sector coupling}
 
 \cvitem{Software development}{
-  FOSS/Linux development, 
-  Trade literature, 
-  Hackathons, 
-  SoCraTes, 
-  Functional software architecture
+  FOSS/Linux development,
+  Trade literature,
+  Hackathons,
+  SoCraTes,
+  Functional software architecture,
+  Test driven development,
 }
 
 \section{Publications}
