@@ -89,7 +89,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 %\phone{+49 (0)30 XXXX XXXX} 
 \mobile{+41 (0)79 458 04 77}
 \email{marc@jakobi.dev}
-\extrainfo{github.com/mrcjkb\\ mrcjkb.dev}
+\extrainfo{\href{https://github.com/mrcjkb}{github.com/mrcjkb}\\ \href{https://mrcjkb.dev}{mrcjkb.dev}}
 
 % optional
 % \photo[height]{name}
@@ -150,10 +150,10 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cventry{2022\textendash current}{Backend developer}{tiko Energy Solutions AG}{}{} 
 {
-  Distributed systems (mostly Haskell), built with Nix.\newline
+  Distributed systems, mostly written in \href{https://www.haskell.org/}{Haskell}. Built with \href{https://nixos.org/}{Nix}.\newline
   (80 \% since 2023)\newline
   \\
-  \textbf{\emph{Virtual power plant and IOT devices}}
+  \textbf{\emph{Virtual Power Plant and IoT devices}}
   \begin{itemize}
     \item Redis/Valkey, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
     \item Microservices written in Haskell
@@ -162,7 +162,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \end{itemize}
 	\textbf{\emph{Data pipelines}}
   \begin{itemize}
-    \item MQTT, Kafka, Thrift, Protobuf, Avro, rocksDB-cloud, TimescaleDB
+    \item MQTT, Kafka, Thrift, Protobuf, Avro, rocksDB-cloud, TimescaleDB, RabbitMQ
     \item Microservices written in Haskell
     \\
   \end{itemize}
@@ -171,9 +171,9 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
     \item Haskell (servant, wai/warp)
     \\
   \end{itemize}
-	\textbf{\emph{CI, Deployment}}
+	\textbf{\emph{Continuous integration, deployment}}
   \begin{itemize}
-    \item Hydra, Morph, Colmena, GitLab, Kubernetes, ArgoCD, Kustomize,\newline Terraform, AWS,
+    \item Hydra, Morph, Colmena, GitLab, k8s, ArgoCD, Kustomize,\newline Terraform, AWS,
           SOPS, Dhall
     \item Release management
     \\
@@ -182,12 +182,13 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \begin{itemize}
     \item Propagated behaviour driven development practices.
     \item Introduced and developed KVM-based integration tests of distributed systems
-          using the \code{nixosTest} framework.
+          using the \code{nixosTest} framework.\newline
+          This enabled tiko to deploy the VPP services with high confidence.
     \\
   \end{itemize}
 	\textbf{\emph{Monitoring, Alerting}}
   \begin{itemize}
-    \item Prometheus, Zabbix, Elasticsearch, OpenTelemetry, Kibana
+    \item OpenTelemetry, Prometheus, Grafana, Zabbix, PagerDuty, Elasticsearch, Kibana
     \item Oncall, Incident response
     \\
   \end{itemize}
@@ -232,7 +233,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
       }
     \item Plugins (e.g. for co-simulations with \texttt{Python}/\texttt{Matlab/Simulink}/PLC).
     \item Charting, reporting.
-    \item UI. 
+    \item UI.
     \item Code reviews (Bitbucket).
     \item Publications/Presentations/Advanced workshops (e.g. at conferences).
       \\
@@ -267,7 +268,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cventry{
   2014\textendash 2017}{Research assistant}
-  {Projects: 
+  {Projects:
     \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pv-store/}{PVstore},
     \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/twinpower/}{TwinPower}
   }{HTW Berlin}{}
@@ -284,11 +285,9 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \clearpage
 \section{Education}
 
-\cventry{2016\textendash 2017}{Master of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{Completion of Master's Thesis in the research group ''solar storage systems'' (Thesis and oral examination: 1.0 / studies: 1.2 [with honours]), HTW Berlin.}{}
+\cventry{2016\textendash 2017}{Master of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
 
-\cventry{2012\textendash 2016}{Bachelor of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{Completion of Bachelor's Thesis in the research group ''solar storage systems'' (Thesis and oral examination: 1.0 / studies: 1.3 [with honours]), HTW Berlin.}{}
-
-\cventry{2006\textendash 2009}{A levels}{Freie Waldorfschule Saar-Hunsrück}{Walhausen}{Grade: 2.1}{}{}
+\cventry{2012\textendash 2016}{Bachelor of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
 
 \section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Master's Thesis}}
 
@@ -299,7 +298,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cvitem{Supervision}{Prof. Dr.-Ing. Volker Quaschning, M. Sc. Tjarko Tjaden}
 
-\cvitem{Grade}{Thesis and oral examination: 1.0 / studies: 1.2}
+\cvitem{Grade}{Thesis and oral examination: 1.0 / studies: 1.2\newline(GPA: A)}
 
 \cvitem{Short summary}{Development of intelligent control applications for PV, battery and heat pump systems in compliance with IEC~61499. Development of communication interfaces for simulation tools such as Polysun and Matlab. Validation via co-simulations. Extension of the runtime environment (4diac-RTE) with a REST communication interface and set-up of a field test.}
 \section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{Bachelor's Thesis}}
@@ -310,7 +309,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cvitem{Supervision}{Prof. Dr.-Ing. Volker Quaschning, M. Sc. Johannes Weniger}
 
-\cvitem{Grade}{Thesis and oral examination: 1.0 / studies: 1.3}
+\cvitem{Grade}{Thesis and oral examination: 1.0 / studies: 1.3\newline(GPA: A)}
 
 \cvitem{Short summary}{Modelling and CUDA-simulation of 46126 Germany-wide distributed PV storage systems. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
 
@@ -348,6 +347,11 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \CC
 }{}
 
+\cvitemwithcomment{Software engineering}{
+  Functional software architecture,
+  test-driven development
+}{}
+
 \cvitemwithcomment{Development environment}{
   \texttt{Neovim},
   \texttt{NixOS},
@@ -376,8 +380,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   Trade literature,
   Hackathons,
   SoCraTes,
-  Functional software architecture,
-  Test driven development,
+  Ensemble programming,
 }
 
 \section{Publications}
