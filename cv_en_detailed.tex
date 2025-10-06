@@ -115,29 +115,10 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 % \makelettertitle % Print letter title
 % % \justify
-% XXX: Very outdated
+% NOTE: cover letter placeholder
 % I was recently contacted regarding a job opening at ...
 % \section{About me}
-% My educational background is in renewable energies. During my Master's degree, I specialised in solar PV, battery storage, and sector coupling (renewable thermal energy and eMobility).
-% Early on in my studies, I started working part-time in a research group, with a focus on forecasting, energy management, and simulation (primarily using \texttt{Matlab}). 
-% It was then that I discovered my passion for software development, and started diving deeper, using literature to teach myself various programming languages and design patterns. 
-% After my studies, I started my current job: Developing simulation software for sector-coupled renewable energy systems (desktop and SaaS applications).
-% As we are a small team, my responsibilities cover the full stack: 
-% Requirement analysis, design, rapid prototyping, front and back end development, code reviews, CI/CD, 3rd level support, to name a few. 
-% With the skill set I have gathered, my team members now consider me a senior developer. 
-% \newline
-% At work, I mostly use \texttt{Java} and \texttt{Python}, with a little bit of \texttt{Kotlin}. 
-% Privately, I prefer \texttt{Haskell} and \texttt{Rust}. My coding style is mostly functional (fluent and monadic) and partly test-driven, with a high degree of automation in enforcing architectural rules (where practical). 
-% Although I currently develop proprietary software professionally, I am a strong advocate for FOSS, and sharing libraries with the community whenever possible. 
-% Despite being passionate about my work, and educating myself with literature daily,  work life balance is very important to me. 
-% To ensure my physical and mental well-being, I adhere to a strict sports schedule.  
-% \section{Why Sympower?}
-% I already consider myself very lucky to be able to combine two of my passions professionally. However, I do feel the desire for greater challenges, and a greater degree of freedom in choosing my tech stack. Therefore, I am open to new opportunities. What has motivated me to send this application to you is my strong passion for renewable energies and the fact that \emph{I want to continue working in this field.}. Since high level software engineering is rather rare in that domain, I do not want to miss out on the opportunity to at least get to know you.
-% \newline
-% That being said, due to the fact that my wife and I live and work in Switzerland, my salary expectations are higher than what is common in the EU: In the range of EUR~90..100k, based on 33~h/week.
-% If you too think that we could be a great match, and would like to get to know me, please do not hesitate to contact me.
-% \newline
-% \newline
+% \section{Why xyz?}
 % \makeletterclosing % Print letter signature
 
 % \newpage
@@ -146,29 +127,48 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \maketitle
 
+\section{Profile}
+\cvitem{}{
+Experienced software engineer and open source advocate with a strong background
+in distributed systems, renewable energy, and FOSS community leadership.
+Proven track record in backend architecture, CI/CD automation, and impactful open source contributions.
+Passionate about functional programming, test-driven development, reproducible builds,
+and bringing innovation to sustainable technologies.
+}
+
 \section{Professional career}
 
 \cventry{2022\textendash current}{Backend developer}{tiko Energy Solutions AG}{}{} 
 {
-  Distributed systems, mostly written in \href{https://www.haskell.org/}{Haskell}. Built with \href{https://nixos.org/}{Nix}.\newline
-  (80 \% since 2023)\newline
+  Architected and developed distributed systems primarily in \href{https://www.haskell.org/}{Haskell},
+  leveraging \href{https://nixos.org/}{Nix} for reproducible builds.
+  (80 \% workload since 2023)\newline
   \\
   \textbf{\emph{Virtual Power Plant and IoT devices}}
   \begin{itemize}
-    \item Redis/Valkey, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
-    \item Microservices written in Haskell
+    \item Microservices written in Haskell for high-throughput, low-latency device management
     \item Legacy monolith written in Java 21 + Scala 2.13
+    \item Redis/Valkey, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
     \\
   \end{itemize}
 	\textbf{\emph{Data pipelines}}
   \begin{itemize}
+    \item Resilient event-driven pipelines written in Haskell
     \item MQTT, Kafka, Thrift, Protobuf, Avro, rocksDB-cloud, TimescaleDB, RabbitMQ
-    \item Microservices written in Haskell
     \\
   \end{itemize}
 	\textbf{\emph{Web services}}
   \begin{itemize}
-    \item Haskell (servant, wai/warp)
+    \item Built and maintained scalable Haskell APIs (servant, wai/warp)
+    \\
+  \end{itemize}
+	\textbf{\emph{Quality \& test automation}}
+  \begin{itemize}
+    \item Propagated behaviour driven development practices,
+          increasing integration test coverage.
+    \item Designed KVM-based integration tests of distributed systems
+          using the \code{nixosTest} framework,\newline
+          enabling zero rollbacks in VPP service deployments.
     \\
   \end{itemize}
 	\textbf{\emph{Continuous integration, deployment}}
@@ -178,17 +178,10 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
     \item Release management
     \\
   \end{itemize}
-	\textbf{\emph{Quality}}
-  \begin{itemize}
-    \item Propagated behaviour driven development practices.
-    \item Introduced and developed KVM-based integration tests of distributed systems
-          using the \code{nixosTest} framework.\newline
-          This enabled tiko to deploy the VPP services with high confidence.
-    \\
-  \end{itemize}
 	\textbf{\emph{Monitoring, Alerting}}
   \begin{itemize}
-    \item OpenTelemetry, Prometheus, Grafana, Zabbix, PagerDuty, Elasticsearch, Kibana
+    \item Implemented OpenTelemetry instrumentation, enabling observability across services.
+    \item Prometheus, Grafana, Zabbix, PagerDuty, Elasticsearch, Kibana
     \item Oncall, Incident response
     \\
   \end{itemize}
@@ -196,7 +189,8 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cventry{2023\textendash current}{Open source volunteer}{20 \%}{}{} 
 {
-  I maintain and contribute to various open source projects, for example:\newline
+  Reduced workload to 80 \% in 2023 to dedicate time to maintaining and contributing to FOSS. Selected projects:
+  \newline
   \newline
   \textbf{\emph{\href{https://opencollective.com/lumen-labs}{Lumen Labs}}}
   \begin{itemize}
@@ -213,7 +207,15 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \textbf{\emph{\href{https://neovim.io/}{Neovim}}}
   \begin{itemize}
     \item Core contributions
-    \item Maintainer of various plugins for Haskell, Rust and Nix development
+    \item Maintainer of various popular plugins and GitHub actions workflows, for example:
+      \begin{itemize}
+        \item \href{https://github.com/mrcjkb/rustaceanvim}{rustaceanvim (Rust)}
+        \item \href{https://github.com/mrcjkb/haskell-tools.nvim}{haskell-tools.nvim}
+        \item \href{https://github.com/mrcjkb/neotest-haskell}{neotest-haskell}
+        \item \href{https://github.com/nvim-neorocks/rocks.nvim}{rocks.nvim}
+        \item \href{https://github.com/mrcjkb/kickstart-nix.nvim}{kickstart-nix.nvim}
+        \item \href{https://github.com/nvim-neorocks/luarocks-tag-release}{luarocks-tag-release}\newline
+      \end{itemize}
   \end{itemize}
 }
 {}
@@ -313,28 +315,20 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cvitem{Short summary}{Modelling and CUDA-simulation of 46126 Germany-wide distributed PV storage systems. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
 
-\section{Other}
-
-\cventry{2016}{Intern/project work}{}{Vela Solaris AG}{Winterthur}{Implementation and validation of the "PVprog" forcast-based control algorithm in Polysun.}
-
-\cventry{2011}{Temp}{}{Brose Fahrzeugteile GmbH; Leuwico GmbH}{Coburg}{Assembly, manufacture}
-
-\cventry{2011}{Intern}{}{Lasco Umformtechnik GmbH}{Coburg}{Montage, inspection, mechanical workshop}
-
-\cventry{2009\textendash 2010}{Social service}{}{REHA GmbH}{Neunkirchen}{}
-
 \section{Languages}
 
-\cvitemwithcomment{English}{Mother tongue}{}
+\cvitem{English}{Mother tongue}
 
-\cvitemwithcomment{German}{Mother tongue}{}
+\cvitem{German}{Mother tongue}
 
-\cvitemwithcomment{French}{Good knowledge}{School, grades 7-13; regular. visits to France and Morocco}
+\cvitem{Swiss German}{Good comprehension (not spoken)}
+
+\cvitem{French}{B1}
 
 \clearpage
 \section{Professional skills}
 
-\cvitemwithcomment{Programming languages}{
+\cvitem{Programming languages}{
   \texttt{Haskell},
   \texttt{Nix},
   \texttt{Rust},
@@ -344,13 +338,19 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \texttt{Java},
   \texttt{Lua},
   \texttt{Python},
-  \CC
-}{}
+  \CC,
+  \texttt{MATLAB}
+}
 
-\cvitemwithcomment{Software engineering}{
+\cvitem{Software engineering}{
   Functional software architecture,
-  test-driven development
-}{}
+  test-driven development,
+  behaviour-driven development,
+  pair programming,
+  distributed systems,
+  CI/CD pipelines,
+  release automation
+}
 
 \cvitemwithcomment{Development environment}{
   \texttt{Neovim},
@@ -360,9 +360,21 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \texttt{jj-vcs}
 }{UNIX is my IDE}
 
-\cvitemwithcomment{Simulation}{Polysun, Simulink, TRNSYS}{}{}
+\cvitem{Simulation}{Polysun, Simulink, TRNSYS}
 
-\cvitem{Scientific documentation}{\noun{\LaTeX{}}, pandoc}{}
+\cvitem{Scientific documentation}{\noun{\LaTeX{}}, pandoc}
+
+\section{Professional interests}
+
+\cvitem{Renewable energiy}{Photovoltaics, batteries, thermal systems, eMobility, sector coupling, energy management}
+
+\cvitem{Software development}{
+  FOSS/Linux development,
+  Trade literature,
+  Hackathons,
+  SoCraTes unconferences,
+  Ensemble programming,
+}
 
 \section{Leisure-time activities}
 
@@ -370,18 +382,6 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \cvitem{Cooking}{}
 \cvitem{Gardening}{}
 
-
-\section{Professional interests}
-
-\cvitem{Renewable energiy}{Photovoltaics, batteries, thermal systems, eMobility, sector coupling}
-
-\cvitem{Software development}{
-  FOSS/Linux development,
-  Trade literature,
-  Hackathons,
-  SoCraTes,
-  Ensemble programming,
-}
 
 \section{Publications}
 
