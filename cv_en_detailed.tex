@@ -127,7 +127,6 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \maketitle
 
-\section{Profile}
 \cvitem{}{
 Experienced software engineer and open source advocate with a strong background
 in distributed systems, renewable energy, and FOSS community leadership.
@@ -169,20 +168,28 @@ and bringing innovation to sustainable technologies.
     \item Designed KVM-based integration tests of distributed systems
           using the \code{nixosTest}\newline framework,
           enabling zero rollbacks in VPP service deployments.
+    \item Led efforts to improve the build system, organise and unify the codebase,
+          write and update documentation, and keep dependencies up to date.
     \\
   \end{itemize}
 	\textbf{\emph{Continuous integration, deployment}}
   \begin{itemize}
     \item Hydra, Morph, Colmena, GitLab, k8s, ArgoCD, Kustomize,\newline Terraform, AWS,
           SOPS, Dhall
-    \item Release management
+    \item Release management, regular system deployments
+    \\
+  \end{itemize}
+	\textbf{\emph{API architecture and collaboration}}
+  \begin{itemize}
+    \item Worked with Data Science, Full Stack and Firmware teams to design cross-system APIs.
+    \item Mentored, supported and pair-programmed with junior backend team members.
     \\
   \end{itemize}
 	\textbf{\emph{Monitoring, Alerting}}
   \begin{itemize}
     \item Implemented OpenTelemetry instrumentation, enabling observability across services.
     \item Prometheus, Grafana, Zabbix, PagerDuty, Elasticsearch, Kibana
-    \item Oncall, Incident response
+    \item On-call rotation, incident response, root cause analysis
     \\
   \end{itemize}
 }
@@ -224,7 +231,7 @@ and bringing innovation to sustainable technologies.
 {
   Java 17, Kotlin, Docker Swarm, Gradle\newline
   \\
-	\textbf{\emph{Polysun Simulation Software}} \emph{(desktop app written in \texttt{Java})}
+	\textbf{\emph{Polysun Simulation Software}} \emph{(desktop app written in Java)}
   \begin{itemize}
     \item Simulation models: Batteries, PV/PVT, controllers, thermal components\newline
       (heat pumps, storage tanks, co-generators, etc.), eMobility.\newline
@@ -233,7 +240,7 @@ and bringing innovation to sustainable technologies.
        control algorithms for PV, batteries and heat pumps.\newline
        Improvement of existing models.
       }
-    \item Plugins (e.g. for co-simulations with \texttt{Python}/\texttt{Matlab/Simulink}/PLC).
+    \item Plugins (e.g. for co-simulations with Python/Matlab/Simulink/PLC).
     \item Charting, reporting.
     \item UI.
     \item Code reviews (Bitbucket).
@@ -250,7 +257,7 @@ and bringing innovation to sustainable technologies.
     \item Software engineering/development:
       \begin{itemize}
         \item \emph{Desktop app with a modular bundle architecture}\newline
-          (\texttt{Java}, \texttt{Kotlin}, Hibernate (H2), Vavr, ReactiveX, Protobuf, ArchUnit).
+          (Java, Kotlin, Hibernate (H2), Vavr, ReactiveX, Protobuf, ArchUnit).
         \item \emph{Cloud platform (backend), microservice architecture}\newline
           (Spring Boot 2, Kafka Streams, MongoDB, Graphwalker).
           \\
@@ -261,7 +268,7 @@ and bringing innovation to sustainable technologies.
     \item CI/CD: Jenkins, Docker Swarm on AWS, e2e testing, release automation
     \item Internal cloud infrastructure (e.g., license migration, sales automation, ...)\newline
       \emph{Apache Camel}.	
-    \item Development of internal CLI applications (\texttt{Haskell}, \texttt{Python})
+    \item Development of internal CLI applications (Haskell, Python)
       \\
   \end{itemize}
 }
@@ -275,7 +282,7 @@ and bringing innovation to sustainable technologies.
     \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/twinpower/}{TwinPower}
   }{HTW Berlin}{}
   {Optimisation of PV systems with batteries and heat pumps.\newline
-  Implementation of simulation models in \texttt{Matlab}.
+  Implementation of simulation models in Matlab.
   }{}
 
 \cventry{2013\textendash 2014}{Research assistant \& intern}{\href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pvprog/}
@@ -352,13 +359,8 @@ and bringing innovation to sustainable technologies.
   release automation
 }
 
-\cvitemwithcomment{Development environment}{
-  \texttt{Neovim},
-  \texttt{NixOS},
-  \texttt{tmux},
-  \texttt{Nushell},
-  \texttt{jj-vcs}
-}{UNIX is my IDE}
+\cvitemwithcomment{Development environment}
+  {Neovim, NixOS, tmux, Nushell, jj-vcs}{UNIX is my IDE}
 
 \cvitem{Simulation}{Polysun, Simulink, TRNSYS}
 
