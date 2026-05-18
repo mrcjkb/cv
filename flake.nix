@@ -3,32 +3,30 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = inputs @ {
+  outputs = {
     self,
     nixpkgs,
-    flake-parts,
     ...
-  }:
-    flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = [
-        "x86_64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-      perSystem = {
-        config,
-        self',
-        inputs',
-        pkgs,
-        system,
-        ...
-      }: let
+  }: let
+    inherit (nixpkgs) lib;
+    foreach = xs: f:
+      with lib;
+        foldr recursiveUpdate {} (
+          if isList xs
+          then map f xs
+          else if isAttrs xs
+          then mapAttrsToList f xs
+          else throw "foreach: expected list or attrset but got ${typeOf xs}"
+        );
+  in
+    foreach nixpkgs.legacyPackages (
+      system: pkgs: let
         pkgs = nixpkgs.legacyPackages.${system};
       in {
-        devShells.default = pkgs.mkShell {
+        legacyPackages.${system} = pkgs;
+        devShells.${system}.default = pkgs.mkShell {
           name = "LaTeX devShell";
           buildInputs = with pkgs;
           with pkgs; [
@@ -41,21 +39,21 @@
             biber
           ];
         };
-        packages = rec {
+        packages.${system} = rec {
           default = cv-en-detailed;
           cv-en-detailed = pkgs.stdenvNoCC.mkDerivation {
-              name = "marcs-cv-en-detailed";
-              src = self;
-              nativeBuildInputs = [
-                xelatex
-              ];
-              buildPhase = ''
-                runHook preBuild
-                mkdir -p $out
-                xelatex -papersize='A4' -halt-on-error cv_en_detailed.tex
-                install -Dm644 cv_en_detailed.pdf -t $out
-                runHook postBuild
-              '';
+            name = "marcs-cv-en-detailed";
+            src = self;
+            nativeBuildInputs = [
+              xelatex
+            ];
+            buildPhase = ''
+              runHook preBuild
+              mkdir -p $out
+              xelatex -papersize='A4' -halt-on-error cv_en_detailed.tex
+              install -Dm644 cv_en_detailed.pdf -t $out
+              runHook postBuild
+            '';
           };
           texlive = pkgs.texlive.combine {
             inherit
@@ -84,6 +82,6 @@
                 --prefix FONTCONFIG_FILE : ${makeFontsConf {fontDirectories = [lmodern font-awesome_4];}}
             '';
         };
-      };
-    };
+      }
+    );
 }
