@@ -6,6 +6,7 @@
 % adjust the page margins
 \usepackage[scale=0.85]{geometry}
 \usepackage[scaled]{helvet} % Helvetica font
+\usepackage[fixed]{fontawesome5}
 % \setmonofont{JetBrains Mono}[Contextuals=Alternate]
 \usepackage{ragged2e}
 \usepackage{relsize}
@@ -83,13 +84,13 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 % optional
 % \address{street and number}{postcode city}
 % '\\' adds a line break
-\address{Winterthur, CH}
+\address{\faIcon{map-pin} Winterthur, CH}
 
 % optional
 %\phone{+49 (0)30 XXXX XXXX} 
 % \mobile{<redacted>}
 \email{marc@jakobi.dev}
-\extrainfo{\href{https://github.com/mrcjkb}{github.com/mrcjkb}\\ \href{https://mrcjkb.dev}{mrcjkb.dev}}
+\extrainfo{\href{https://github.com/mrcjkb}{\faIcon{github} mrcjkb}\\ \href{https://mrcjkb.dev}{\faIcon{link} mrcjkb.dev}\\ \href{https://www.linkedin.com/in/marc-jakobi/}{\faIcon{linkedin} marc-jakobi}}
 
 % optional
 % \photo[height]{name}
@@ -135,7 +136,7 @@ Passionate about functional programming, test-driven development, reproducible b
 and bringing innovation to sustainable technologies.
 }
 
-\section{Professional career}
+\section{\faIcon{briefcase} Professional career}
 
 \cventry{02/2022\textendash 02/2026}{Backend developer}{tiko Energy Solutions AG}{}{} 
 {
@@ -293,13 +294,13 @@ and bringing innovation to sustainable technologies.
 {}
 
 \clearpage
-\section{Education}
+\section{\faIcon{graduation-cap} Education}
 
 \cventry{2016\textendash 2017}{Master of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
 
 \cventry{2012\textendash 2016}{Bachelor of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
 
-\section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Master's Thesis}}
+\section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{\faIcon{book} Master's Thesis}}
 
 \cvitem{Title}{\emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Development of model-based control applications compliant with IEC~61499 for building energy systems with a focus on photovoltaics}}}
 
@@ -311,7 +312,7 @@ and bringing innovation to sustainable technologies.
 \cvitem{Grade}{Thesis and oral examination: 1.0 / studies: 1.2\newline(GPA: A)}
 
 \cvitem{Short summary}{Development of intelligent control applications for PV, battery and heat pump systems in compliance with IEC~61499. Development of communication interfaces for simulation tools such as Polysun and Matlab. Validation via co-simulations. Extension of the runtime environment (4diac-RTE) with a REST communication interface and set-up of a field test.}
-\section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{Bachelor's Thesis}}
+\section{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{\faIcon{book} Bachelor's Thesis}}
 
 \cvitem{Title}{\emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{Optimierung der Netzeinspeisung von deutschlandweit verteilten PV-Speichersystemen mit prognosebasierten Betriebsstrategien}}}
 
@@ -323,7 +324,7 @@ and bringing innovation to sustainable technologies.
 
 \cvitem{Short summary}{Modelling and CUDA-simulation of 46126 Germany-wide distributed PV storage systems. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
 
-\section{Languages}
+\section{\faIcon{language} Languages}
 
 \cvitem{English}{Mother tongue}
 
@@ -334,7 +335,7 @@ and bringing innovation to sustainable technologies.
 \cvitem{French}{B1}
 
 \clearpage
-\section{Professional skills}
+\section{\faIcon{briefcase} Professional skills}
 
 \cvitem{Programming languages}{
   \texttt{Haskell},
@@ -364,13 +365,13 @@ and bringing innovation to sustainable technologies.
 }
 
 \cvitemwithcomment{Development environment}
-  {Neovim, Linux (NixOS), tmux, Nushell, jj-vcs}{UNIX is my IDE}
+  {Vim/Neovim, Linux (NixOS), tmux, Nushell, jj-vcs}{UNIX is my IDE}
 
 \cvitem{Simulation}{Polysun, Simulink, TRNSYS}
 
-\cvitem{Scientific documentation}{\noun{\LaTeX{}}, pandoc}
+\cvitem{Scientific documentation}{\noun{\LaTeX{}}, Typst, Pandoc}
 
-\section{Professional interests}
+\section{\faIcon{briefcase} Professional interests}
 
 \cvitem{Renewable energy}{Photovoltaics, batteries, thermal systems, eMobility, sector coupling, energy management}
 
@@ -382,14 +383,14 @@ and bringing innovation to sustainable technologies.
   Ensemble programming,
 }
 
-\section{Leisure-time activities}
+\section{\faIcon{user} Leisure-time activities}
 
 \cvitem{Sports}{{\small{}Running, cycling, hiking}}
 \cvitem{Cooking}{}
-\cvitem{Gardening}{}
+\cvitem{Urban gardening}{}
 
 
-\section{Publications}
+\section{\faIcon{book} Publications}
 
 \cvitem{Conference paper}{Jakobi, M.; Kunath, L.; Witzig, A. \emph{\href{https://proceedings.ises.org/paper/eurosun2018/eurosun2018-0147-Jakobi.pdf}{BIM use-case: Model-based performance optimization.}} EuroSun international conference on solar energy for buildings and industry, Rapperswil, 2018.}
 
