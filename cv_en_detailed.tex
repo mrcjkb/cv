@@ -59,8 +59,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 %C++
 % \newcommand\CC{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\relsize{-3}{\textbf{+}}}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\relsize{-3}{\textbf{+}}}}
-\newcommand\CC{\texttt{C}\nolinebreak[4]\hspace{-.05em}\raisebox{.3ex}{\relsize{-3}{\textbf{++}}}}
-\newcommand\C{\texttt{C}\nolinebreak[4]\hspace{-.05em}\raisebox{.3ex}{\relsize{-3}}}
+\newcommand\CC{C\nolinebreak[4]\hspace{-.05em}\raisebox{.3ex}{\relsize{-3}{\textbf{++}}}}
 
 \renewcommand\familydefault{\sfdefault} 
 
@@ -78,20 +77,27 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \familyname{Jakobi}
 
 % optional, remove the line if not wanted
-% \title{born 1989-04-18 in Filderstadt}
+% \title{born 1989-04-18 in Filderstadt, DE}
 \title{Curriculum Vitae}
 
 % optional
 % \address{street and number}{postcode city}
 % '\\' adds a line break
 % \address{\faIcon{map-pin} Winterthur, CH}
+\newcommand{\addr}{\faIcon{map-pin} Winterthur, CH}
+\newcommand{\natel}{\mobilephonesymbol\@mobile{<redacted>}}
+\newcommand{\mail}{\emailsymbol\emaillink{marc@jakobi.dev}}
+\newcommand{\github}{\href{https://github.com/mrcjkb}{\faIcon{github} mrcjkb}}
+\newcommand{\website}{\href{https://mrcjkb.dev}{\faIcon{link} mrcjkb.dev}}
+\newcommand{\linkedin}{\href{https://www.linkedin.com/in/marc-jakobi/}{\faIcon{linkedin} marc-jakobi}}
+\newcommand{\footer}{\fancyfoot[C]{\footnotesize \addr\ \ \natel\ \ \mail\ \ \github\ \ \website\ \ \linkedin}}
 
 % optional
 %\phone{+49 (0)30 XXXX XXXX} 
 % \mobile{<redacted>}
-\email{marc@jakobi.dev}
-\extrainfo{\href{https://github.com/mrcjkb}{\faIcon{github} mrcjkb}\\ \href{https://mrcjkb.dev}{\faIcon{link} mrcjkb.dev}\\ \href{https://www.linkedin.com/in/marc-jakobi/}{\faIcon{linkedin} marc-jakobi}}
 
+% \email{marc@jakobi.dev}
+% \extrainfo{\github\\ \website\\ \linkedin}
 % optional
 % \photo[height]{name}
 % 'height' is the height the picture is resized to
@@ -99,14 +105,22 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \photo[70pt]{CV_photo.jpg}
 
 % optional
-\quote{<<Insanity is running the same build over and over again and getting different results>>}
+\quote{<<Insanity is running the same build over and over again\\and getting different results>>}
 
-\makeatother
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{color1}\leaders\hrule height \footrulewidth\hfill}}
+\newcommand{\newpagewithfooter}{
+\clearpage
+\footer
+}
+
 \begin{document}
+
+\footer
 
 % ------------- Cover letter --------------
 
-% \clearpage
+% \newpagewithfooter
 
 % \recipient{HR Department}{Sympower\\Prinsengracht 437-A\\1016 HM – Amsterdam, The Netherlands} % Letter recipient
 % \date{\today} % Letter date
@@ -130,10 +144,10 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cvitem{}{
 Experienced backend engineer and open source maintainer combining
-\textbf{\mbox{renewable} energy systems expertise} with deep experience in
-\textbf{distributed systems and functional software engineering}.
+\textbf{\mbox{renewable energy} systems expertise} with deep experience in
+\textbf{distributed systems} \& \textbf{functional software engineering}.
 Proven track record in \textbf{building reliable backend platforms}, shaping clean architectures,
-and improving software delivery through \textbf{test automation, CI/CD, reproducible builds, and XP practices}.
+and taking ownership of quality-focused delivery through \textbf{test automation, CI/CD, reproducible builds, and collaborative XP practices}.
 }
 
 \section{\faIcon{briefcase} Professional career}
@@ -196,6 +210,8 @@ and improving software delivery through \textbf{test automation, CI/CD, reproduc
   \end{itemize}
 }
 
+\newpagewithfooter
+
 \cventry{2023\textendash current}{Open source volunteer}{20 \%}{}{} 
 {
   Reduced workload to 80 \% in 2023 to dedicate time to maintaining and contributing to FOSS. Selected projects:
@@ -243,17 +259,15 @@ and improving software delivery through \textbf{test automation, CI/CD, reproduc
        Improvement of existing models.
       }
     \item Plugins (e.g. for co-simulations with Python/Matlab/Simulink/PLC).
-    \item Charting, reporting.
-    \item UI.
-    \item Publications/Presentations/Advanced workshops (e.g. at conferences).
+    \item Charting, reporting, UX.
+    \item Publications, presentations and advanced workshops (e.g. at conferences).
       \\
   \end{itemize}
 	\textbf{\emph{Polysun BIM}} 
-	\emph{Description: Automation of engineering workflows in the building sector;\newline
-	data exchange with other applications.}\newline
+	\emph{(automation of engineering workflows in the building sector})
   \begin{itemize}
-    \item Customer interviews / requirement analysis.
-    \item Rapid prototyping (interactive mock-ups) + concept validation with pilot customers.
+    \item Conducted customer interviews \& translated feedback into requirements.
+    \item Rapid prototyping \& concept validation with pilot customers.
     \item Roadmap planning.
     \item Software engineering/development:
       \begin{itemize}
@@ -266,7 +280,8 @@ and improving software delivery through \textbf{test automation, CI/CD, reproduc
   \end{itemize}
   \textbf{\emph{Infrastructure}}
   \begin{itemize}
-    \item CI/CD: Jenkins, Docker Swarm on AWS, e2e testing, release automation
+    \item CI/CD: Jenkins, Docker Swarm on AWS, e2e testing.
+    \item Fully automated the Polysun release pipeline.
     \item Internal cloud infrastructure (e.g., licensing, sales automation, ...)\newline
       \emph{Apache Camel}.
     \item Developer tooling (CLI applications in Haskell, Python).
@@ -277,22 +292,21 @@ and improving software delivery through \textbf{test automation, CI/CD, reproduc
 
 
 \cventry{
-  2014\textendash 2017}{Research assistant}
-  {Projects:
+  2013\textendash 2017}{Research assistant}
+  { \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pvprog/}{PVprog},
     \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pv-store/}{PVstore},
     \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/twinpower/}{TwinPower}
   }{HTW Berlin}{}
-  {Optimisation of PV systems with batteries and heat pumps.\newline
-  Implementation of simulation models in Matlab.
+  { Development of forecast-based operational strategies for PV storage systems.\newline
+    Optimisation of PV systems with batteries and heat pumps.\newline
+   Implementation of simulation models in Matlab.
   }{}
 
-\cventry{2013\textendash 2014}{Research assistant \& intern}{\href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pvprog/}
-{Project: PVprog}}
-{HTW Berlin}{}
-{Development of forecast-based operational strategies for PV storage systems.}
-{}
+\cventry{2011}{Factory worker}{}{Brose Fahrzeugteile, Leuwico, Lasco Umformtechnik}{}{}{}
+\cventry{2010}{Math \& english tutor}{}{Studentenring Coburg}{}{}{}
+\cventry{2009}{Social service}{}{reha Gmbh}{}{}{}
+\newpagewithfooter
 
-\clearpage
 \section{\faIcon{graduation-cap} Education}
 
 \cventry{2016\textendash 2017}{Master of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
@@ -321,65 +335,70 @@ and improving software delivery through \textbf{test automation, CI/CD, reproduc
 
 \cvitem{Short summary}{Modelling and highly parallel CUDA simulation of 46126 PV storage systems distributed across Germany. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
 
-% \clearpage
+% \newpagewithfooter
 \section{\faIcon{briefcase} Professional skills}
 
-\cvitem{Programming languages}{
-  \texttt{Haskell},
-  \texttt{Nix},
-  \texttt{Rust},
-  \texttt{Elixir},
-  \C,
-  \texttt{Scala},
-  \texttt{Kotlin},
-  \texttt{Java},
-  \texttt{Lua},
-  \texttt{Python},
+\cvitem{Languages}{
+  Haskell,
+  Nix,
+  Rust,
+  Elixir,
+  C,
+  Scala,
+  Kotlin,
+  Java,
+  Lua,
+  Python,
   \CC,
-  \texttt{TypeScript},
-  \texttt{MATLAB}
+  TypeScript,
+  MATLAB
 }
 
 \cvitem{Software engineering}{
   Functional software architecture,
-  test-driven development,
-  behaviour-driven development,
+  TDD,
+  BDD,
   property testing,
   pair programming,
   distributed systems,
   CI/CD,
-  automation
+  quality-focused automation
 }
 
-\cvitem{Renewable energy}{Photovoltaics, batteries, e-mobility, thermal systems, sector coupling, energy management, virtual power plants}
+\cvitem{Renewable energy}{Photovoltaics, batteries, e-mobility, thermal systems, sector coupling, energy management, electric grid}
 
-\cvitemwithcomment{Development environment}
+\cvitemwithcomment{Dev environment}
   {Vim/Neovim, Linux (NixOS), tmux, Nushell, jj-vcs}{UNIX is my IDE}
 
 \cvitem{Simulation}{Polysun, Simulink, TRNSYS}
 
 \cvitem{Scientific documentation}{\noun{\LaTeX{}}, Typst, Pandoc}
 
-\section{\faIcon{briefcase} Professional interests}
+\section{\faIcon{mountain} Interests}
 
-\cvitem{Software development}{
+\cvitem{Professional}{
   FOSS/Linux development,
   trade literature,
-  hackathons,
   (un)conferences,
-  ensemble programming,
+  hackathons,
+  ensemble programming
 }
+\cvitem{Leisure}{Cooking, urban gardening, running, cycling, hiking}
 
 \section{\faIcon{language} Languages}
 
-\cvitem{English}{Bilingual native proficiency}
+\cvitem{English}{Bilingual native proficiency (UK citizen)}
 
-\cvitem{German}{Bilingual native proficiency}
+\cvitem{German}{Bilingual native proficiency (German citizen)}
 
-\cvitem{Swiss German}{Good comprehension (not spoken)}
+\cvitem{Swiss German}{Good comprehension (C permit)}
 
 \cvitem{French}{B1}
 
+% \section{Personal}
+%
+% \cvitem{Born 1989\-04\-18 in Filderstadt, Germany}
+%
 % \section{\faIcon{book} Publications}
 %
 % \cvitem{Conference paper}{Jakobi, M.; Kunath, L.; Witzig, A. \emph{\href{https://proceedings.ises.org/paper/eurosun2018/eurosun2018-0147-Jakobi.pdf}{BIM use-case: Model-based performance optimization.}} EuroSun international conference on solar energy for buildings and industry, Rapperswil, 2018.}
