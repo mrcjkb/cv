@@ -1,3 +1,29 @@
+\newif\ifletter
+\newif\ifcv
+
+\letterfalse
+\cvfalse
+
+\ifdefined\LETTERONLY
+  \lettertrue
+\fi
+
+\ifdefined\CVONLY
+  \cvtrue
+\fi
+
+\ifdefined\COMBINED
+  \lettertrue
+  \cvtrue
+\fi
+
+\ifletter\else
+  \ifcv\else
+    \letterfalse
+    \cvtrue
+  \fi
+\fi
+
 %\documentclass[12pt,a4paper,ngerman]{moderncv}
 \documentclass[11pt,a4paper,ngerman,sans]{moderncv}
 \usepackage[T1]{fontenc}
@@ -121,23 +147,28 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 % ------------- Cover letter --------------
 
-% \newpagewithfooter
+\def\todayDE{\number\day.\ \ifcase\month\or
+  Januar\or Februar\or März\or April\or Mai\or Juni\or
+  Juli\or August\or September\or Oktober\or November\or Dezember\fi
+  \space\number\year}
 
-% \recipient{HR Department}{Sympower\\Prinsengracht 437-A\\1016 HM – Amsterdam, The Netherlands} % Letter recipient
-% \date{\today} % Letter date
-% \opening{Dear Sir or Madam,} % Opening greeting
-% \closing{Sincerely yours,} % Closing phrase
-% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+\ifletter
+\newpagewithfooter
 
-% \makelettertitle % Print letter title
-% % \justify
-% NOTE: cover letter placeholder
-% I was recently contacted regarding a job opening at ...
-% \section{About me}
-% \section{Why xyz?}
-% \makeletterclosing % Print letter signature
+\recipient{<name>}{<address>} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear Sir or Madam,} % Opening greeting
+\closing{Sincerely yours,} % Closing phrase
 
-% \newpage
+\makelettertitle % Print letter title
+\justify
+
+
+\makeletterclosing % Print letter signature
+\fi
+\newpagewithfooter
+
+\ifcv
 
 % ------------------- CV -------------------
 
@@ -428,4 +459,5 @@ and taking ownership of quality-focused delivery through \textbf{test automation
 % \cvitem{Urban gardening}{}
 %
 
+\fi
 \end{document}
