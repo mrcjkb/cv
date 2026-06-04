@@ -41,20 +41,6 @@
 \usepackage{tikz}
 \setlist{nolistsep}
 
-% A custom version of the \cventry command that supports large itemized lists
-% inside argument #7 (the custom cvitemize lists should be used!)
-\newcommand*{\cventrylong}[7][.25em]{%
-  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
-    \raggedleft\hintstyle{#2} &{%
-        {\bfseries#3}%
-        \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
-        \ifthenelse{\equal{#5}{}}{}{, #5}%
-        \ifthenelse{\equal{#6}{}}{}{, #6}%
-    }%
-  \end{tabular}%
-  {\small#7}%
-  \par\addvspace{#1}}
-
 \tikzset{
     baseline,
     inner sep=2pt,
