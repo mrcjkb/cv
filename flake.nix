@@ -70,6 +70,7 @@
               fontawesome5
               marvosym
               multirow
+              changepage
               ;
           };
           xelatex = with pkgs;

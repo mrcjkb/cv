@@ -39,6 +39,8 @@
 % customize the enumerate environments (i.e. enumerate, itemize, ...)
 \usepackage{enumitem}
 \usepackage{tikz}
+\usepackage{changepage}
+
 \setlist{nolistsep}
 
 \tikzset{
@@ -89,8 +91,9 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \familyname{Jakobi}
 
 % optional, remove the line if not wanted
-% \title{born 1989-04-18 in Filderstadt, DE}
+% \born{1989-04-18 in Filderstadt, DE}
 % \title{Curriculum Vitae}
+\title{Renewable Energy Systems | Software Engineer}
 
 % optional
 % \address{street and number}{postcode city}
@@ -111,10 +114,9 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 % \email{marc@jakobi.dev}
 % \extrainfo{\github\\ \website\\ \linkedin}
 % optional
-% \photo[height]{name}
 % 'height' is the height the picture is resized to
 % 'name' is the name of the picture file
-\photo[70pt]{CV_photo.jpg}
+\photo[85pt][0pt]{CV_photo.jpg}
 
 % optional
 \quote{<<Insanity is running the same build over and over again\\and getting different results>>}
@@ -161,181 +163,15 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \maketitle
 
 \cvitem{}{
-Experienced backend engineer and open source maintainer combining
+Experienced software engineer and open source maintainer combining
 \textbf{\mbox{renewable energy} systems expertise} with deep experience in
-\textbf{distributed systems} \& \textbf{functional software engineering}.
+\textbf{distributed systems} \& \textbf{functional programming}.
 Proven track record in \textbf{building reliable backend platforms}, shaping clean architectures,
 and taking ownership of quality-focused delivery through \textbf{test automation, CI/CD, reproducible builds, and collaborative XP practices}.
 }
 
-\section{\faIcon{briefcase} Professional career}
+\@initializelength{\maincolumnindent} \setlength{\maincolumnindent}{\hintscolumnwidth + \separatorcolumnwidth}
 
-\cventry{02/2022\textendash 02/2026}{Backend developer}{tiko Energy Solutions AG}{}{} 
-{
-  Architected and developed distributed systems primarily in \href{https://www.haskell.org/}{Haskell},
-  leveraging \href{https://nixos.org/}{Nix} for reproducible builds.
-  (80 \% workload since 2023)\newline
-  \\
-  \textbf{\emph{Virtual Power Plant and IoT devices}}
-  \begin{itemize}
-    \item Microservices written in Haskell for high-throughput, low-latency device management
-          and ancillary services (FCR + aFRR)
-    % \item Legacy monolith written in Java 21 + Scala 2.13
-    \item Redis/Valkey, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
-    \\
-  \end{itemize}
-	\textbf{\emph{Data pipelines}}
-  \begin{itemize}
-    \item Resilient event-driven pipelines written in Haskell
-    \item MQTT, Kafka, Thrift, Protobuf, Avro, rocksDB-cloud, TimescaleDB, RabbitMQ
-    \\
-  \end{itemize}
-	\textbf{\emph{Web services}}
-  \begin{itemize}
-    \item Built and maintained scalable Haskell APIs (servant, wai/warp)
-    \\
-  \end{itemize}
-	\textbf{\emph{Quality \& test automation}}
-  \begin{itemize}
-    \item Propagated behaviour driven development practices,
-          increasing integration test coverage.
-    \item Designed KVM-based integration tests of distributed systems
-          using the nixosTest\newline framework,
-          enabling zero rollbacks in VPP service deployments.
-    \item Led efforts to improve the build system, organise and unify the codebase,
-          write and update documentation, and keep dependencies up to date.
-    \\
-  \end{itemize}
-	\textbf{\emph{Continuous integration, deployment}}
-  \begin{itemize}
-    \item Hydra, Morph, Colmena, GitLab, k8s, ArgoCD, Kustomize,\newline Terraform, AWS,
-          SOPS, Dhall
-    \item Release management, regular system deployments
-    \\
-  \end{itemize}
-	\textbf{\emph{API architecture and collaboration}}
-  \begin{itemize}
-    \item Worked with Data Science, Full Stack and Firmware teams to design cross-system APIs.
-    \item Mentored, supported and pair-programmed with junior backend team members.
-    \\
-  \end{itemize}
-	\textbf{\emph{Monitoring, Alerting}}
-  \begin{itemize}
-    \item Implemented OpenTelemetry instrumentation, enabling observability across services.
-    \item Prometheus, Grafana, Zabbix, PagerDuty, Elasticsearch, Kibana
-    \item On-call rotation, incident response, root cause analysis
-    \\
-  \end{itemize}
-}
-
-\newpagewithfooter
-
-\cventry{2023\textendash current}{Open source volunteer}{20 \%}{}{} 
-{
-  Reduced workload to 80 \% in 2023 to dedicate time to maintaining and contributing to FOSS. Selected projects:
-  \newline
-  \newline
-  \textbf{\emph{\href{https://opencollective.com/lumen-labs}{Lumen Labs}}}
-  \begin{itemize}
-    \item Lead maintainer of the \href{https://lux.lumen-labs.org}{Lux package manager} for Lua (written in Rust)
-    \\
-  \end{itemize}
-  \textbf{\emph{\href{https://nixos.org/}{NixOS}}}
-  \begin{itemize}
-    \item Maintainer of various packages and NixOS modules
-    \item Member of the \href{https://github.com/orgs/NixOS/teams/nixpkgs-committers}{nixpkgs-committers},
-      \href{https://github.com/orgs/NixOS/teams/neovim}{Neovim} and \href{https://github.com/orgs/NixOS/teams/lua}{Lua} maintainer teams
-    \\
-  \end{itemize}
-  \textbf{\emph{\href{https://neovim.io/}{Neovim}}}
-  \begin{itemize}
-    \item Core contributions
-    \item Maintainer of various popular plugins and GitHub actions workflows, including:
-      \begin{itemize}
-        \item \href{https://github.com/mrcjkb/rustaceanvim}{rustaceanvim (Rust)}
-        \item \href{https://github.com/mrcjkb/haskell-tools.nvim}{haskell-tools.nvim}
-        \item \href{https://github.com/mrcjkb/neotest-haskell}{neotest-haskell}
-        \item \href{https://github.com/nvim-neorocks/rocks.nvim}{rocks.nvim}
-        \item \href{https://github.com/mrcjkb/kickstart-nix.nvim}{kickstart-nix.nvim}
-        \item \href{https://github.com/nvim-neorocks/luarocks-tag-release}{luarocks-tag-release}\newline
-      \end{itemize}
-  \end{itemize}
-}
-{}
-
-\cventry{11/2017\textendash 01/2022}{Software engineer}{Vela Solaris AG}{}{}
-{
-  Java 17, Kotlin, Docker Swarm, Gradle\newline
-  \\
-	\textbf{\emph{Polysun Simulation Software}} \emph{(desktop app written in Java)}
-  \begin{itemize}
-    \item Simulation models: Batteries, PV/PVT, controllers, thermal components\newline
-      (heat pumps, storage tanks, co-generators, etc.), eMobility.\newline
-      \emph{
-       Examples: Implementation of a new battery model;\newline
-       control algorithms for PV, batteries and heat pumps.\newline
-       Improvement of existing models.
-      }
-    \item Plugins (e.g. for co-simulations with Python/Matlab/Simulink/PLC).
-    \item Charting, reporting, UX.
-    \item Publications, presentations and advanced workshops (e.g. at conferences).
-      \\
-  \end{itemize}
-	\textbf{\emph{Polysun BIM}} 
-	\emph{(automation of engineering workflows in the building sector})
-  \begin{itemize}
-    \item Conducted customer interviews \& translated feedback into requirements.
-    \item Rapid prototyping \& concept validation with pilot customers.
-    \item Roadmap planning.
-    \item Software engineering/development:
-      \begin{itemize}
-        \item \emph{Desktop app with a modular bundle architecture}\newline
-          (Java, Kotlin, Hibernate (H2), Vavr, ReactiveX, Protobuf, ArchUnit).
-        \item \emph{Cloud platform (backend), microservice architecture}\newline
-          (Spring Boot 2, Kafka Streams, MongoDB, Graphwalker).
-          \\
-      \end{itemize}
-  \end{itemize}
-  \textbf{\emph{Infrastructure}}
-  \begin{itemize}
-    \item CI/CD: Jenkins, Docker Swarm on AWS, e2e testing.
-    \item Fully automated the Polysun release pipeline.
-    \item Internal cloud infrastructure (e.g., licensing, sales automation, ...)\newline
-      \emph{Apache Camel}.
-    \item Developer tooling (CLI applications in Haskell, Python).
-      \\
-  \end{itemize}
-}
-{}
-
-
-\cventry{
-  2013\textendash 2017}{Research assistant}
-  { \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pvprog/}{PVprog},
-    \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pv-store/}{PVstore},
-    \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/twinpower/}{TwinPower}
-  }{HTW Berlin}{}
-  { Development of forecast-based operational strategies for PV storage systems.\newline
-    Optimisation of PV systems with batteries and heat pumps.\newline
-   Implementation of simulation models in Matlab.
-  }{}
-
-\cventry{2011}{Factory worker}{}{Brose Fahrzeugteile, Leuwico, Lasco Umformtechnik}{}{}{}
-\cventry{2010}{Math \& english tutor}{}{Studentenring Coburg}{}{}{}
-\cventry{2009}{Social service}{}{reha Gmbh}{}{}{}
-\newpagewithfooter
-
-\section{\faIcon{graduation-cap} Education}
-
-\cventry{2016\textendash 2017}{Master of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
-\cvitem{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{\faIcon{book} Thesis}}{\emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Development of model-based control applications compliant with IEC~61499 for building energy systems with a focus on photovoltaics}}}{}{}{}{}
-\cvitem{Summary}{Development of intelligent control applications for PV, battery and heat pump systems in compliance with IEC~61499. Development of communication interfaces for simulation tools such as Polysun and Matlab. Validation via co-simulations. Extension of the runtime environment (4diac-RTE) with a REST communication interface and set-up of a field test.}
-
-\cventry{2012\textendash 2016}{Bachelor of Science - Renewable Energy Systems}{Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
-\cvitem{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{\faIcon{book} Thesis}}{\emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{Optimisation of grid feed-in from PV storage systems distributed across Germany using forecast-based operating strategies}}}{}{}{}{}
-\cvitem{Summary}{Modelling and highly parallel CUDA simulation of 46126 PV storage systems distributed across Germany. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
-
-% \newpagewithfooter
 \section{\faIcon{briefcase} Professional skills}
 
 \cvitem{Languages}{
@@ -374,6 +210,180 @@ and taking ownership of quality-focused delivery through \textbf{test automation
 
 \cvitem{Scientific documentation}{\noun{\LaTeX{}}, Typst, Pandoc}
 
+\section{\faIcon{briefcase} Professional career}
+
+\cventry{02/2022\textendash 02/2026}{Backend developer}{tiko Energy Solutions AG}{}{}{} 
+{
+  \begin{adjustwidth}{\maincolumnindent}{\rightskip}
+    \small{
+      Architected and developed distributed systems primarily in \href{https://www.haskell.org/}{Haskell},
+      leveraging \href{https://nixos.org/}{Nix} for reproducible builds.
+      (80 \% workload since 2023)\newline
+      \\
+      \textbf{\emph{Virtual Power Plant and IoT devices}}
+      \begin{itemize}
+        \item Microservices written in Haskell for high-throughput, low-latency device management
+              and ancillary services (FCR + aFRR)
+        % \item Legacy monolith written in Java 21 + Scala 2.13
+        \item Redis/Valkey, Kafka, CBOR, MQTT, PostgreSQL, Hazelcast, GraphQL
+        \\
+      \end{itemize}
+      \textbf{\emph{Data pipelines}}
+      \begin{itemize}
+        \item Resilient event-driven pipelines written in Haskell
+        \item MQTT, Kafka, Thrift, Protobuf, Avro, rocksDB-cloud, TimescaleDB, RabbitMQ
+        \\
+      \end{itemize}
+      \textbf{\emph{Web services}}
+      \begin{itemize}
+        \item Built and maintained scalable Haskell APIs (servant, wai/warp)
+        \\
+      \end{itemize}
+      \textbf{\emph{Quality \& test automation}}
+      \begin{itemize}
+        \item Propagated behaviour driven development practices,
+              increasing integration test coverage.
+        \item Designed KVM-based integration tests of distributed systems
+              using the nixosTest\newline framework,
+              enabling zero rollbacks in VPP service deployments.
+        \item Led efforts to improve the build system, organise and unify the codebase,
+              write and update documentation, and keep dependencies up to date.
+        \\
+      \end{itemize}
+      \textbf{\emph{Continuous integration, deployment}}
+      \begin{itemize}
+        \item Hydra, Morph, Colmena, GitLab, k8s, ArgoCD, Kustomize,\newline Terraform, AWS,
+              SOPS, Dhall
+        \item Release management, regular system deployments
+        \\
+      \end{itemize}
+      \textbf{\emph{API architecture and collaboration}}
+      \begin{itemize}
+        \item Worked with Data Science, Full Stack and Firmware teams to design cross-system APIs.
+        \item Mentored, supported and pair-programmed with junior backend team members.
+        \\
+      \end{itemize}
+      \textbf{\emph{Monitoring, Alerting}}
+      \begin{itemize}
+        \item Implemented OpenTelemetry instrumentation, enabling observability across services.
+        \item Prometheus, Grafana, Zabbix, PagerDuty, Elasticsearch, Kibana
+        \item On-call rotation, incident response, root cause analysis
+        \\
+      \end{itemize}
+    }
+  \end{adjustwidth}
+}
+
+% \newpagewithfooter
+
+\cventry{2023\textendash current}{Open source volunteer}{20 \%}{}{} 
+{
+  Reduced workload to 80 \% in 2023 to dedicate time to maintaining and contributing to FOSS. Selected projects:
+  \newline
+  \newline
+  \textbf{\emph{\href{https://opencollective.com/lumen-labs}{Lumen Labs}}}
+  \begin{itemize}
+    \item Lead maintainer of the \href{https://lux.lumen-labs.org}{Lux package manager} for Lua (written in Rust)
+    \\
+  \end{itemize}
+  \textbf{\emph{\href{https://nixos.org/}{NixOS}}}
+  \begin{itemize}
+    \item Maintainer of various packages and NixOS modules
+    \item Member of the \href{https://github.com/orgs/NixOS/teams/nixpkgs-committers}{nixpkgs-committers},
+      \href{https://github.com/orgs/NixOS/teams/neovim}{Neovim} and \href{https://github.com/orgs/NixOS/teams/lua}{Lua} maintainer teams
+    \\
+  \end{itemize}
+  \textbf{\emph{\href{https://neovim.io/}{Neovim}}}
+  \begin{itemize}
+    \item Core contributions
+    \item Maintainer of various popular plugins and GitHub actions workflows, including:
+      \begin{itemize}
+        \item \href{https://github.com/mrcjkb/rustaceanvim}{rustaceanvim (Rust)}
+        \item \href{https://github.com/mrcjkb/haskell-tools.nvim}{haskell-tools.nvim}
+        \item \href{https://github.com/mrcjkb/neotest-haskell}{neotest-haskell}
+        \item \href{https://github.com/nvim-neorocks/rocks.nvim}{rocks.nvim}
+        \item \href{https://github.com/mrcjkb/kickstart-nix.nvim}{kickstart-nix.nvim}
+        \item \href{https://github.com/nvim-neorocks/luarocks-tag-release}{luarocks-tag-release}\newline
+      \end{itemize}
+  \end{itemize}
+}
+{}
+
+\cventry{11/2017\textendash 01/2022}{Software engineer}{Vela Solaris AG}{}{}{}
+{
+  \begin{adjustwidth}{\maincolumnindent}{\rightskip}
+    \small{
+      Java 17, Kotlin, Docker Swarm, Gradle\newline
+      \\
+      \textbf{\emph{Polysun Simulation Software}} \emph{(desktop app written in Java)}
+      \begin{itemize}
+        \item Simulation models: Batteries, PV/PVT, controllers, thermal components\newline
+          (heat pumps, storage tanks, co-generators, etc.), eMobility.\newline
+          \emph{
+           Examples: Implementation of a new battery model;\newline
+           control algorithms for PV, batteries and heat pumps.\newline
+           Improvement of existing models.
+          }
+        \item Plugins (e.g. for co-simulations with Python/Matlab/Simulink/PLC).
+        \item Charting, reporting, UX.
+        \item Publications, presentations and advanced workshops (e.g. at conferences).
+          \\
+      \end{itemize}
+      \textbf{\emph{Polysun BIM}} 
+      \emph{(automation of engineering workflows in the building sector})
+      \begin{itemize}
+        \item Conducted customer interviews \& translated feedback into requirements.
+        \item Rapid prototyping \& concept validation with pilot customers.
+        \item Roadmap planning.
+        \item Software engineering/development:
+          \begin{itemize}
+            \item \emph{Desktop app with a modular bundle architecture}\newline
+              (Java, Kotlin, Hibernate (H2), Vavr, ReactiveX, Protobuf, ArchUnit).
+            \item \emph{Cloud platform (backend), microservice architecture}\newline
+              (Spring Boot 2, Kafka Streams, MongoDB, Graphwalker).
+          \end{itemize}
+      \end{itemize}
+      \textbf{\emph{Infrastructure}}
+      \begin{itemize}
+        \item CI/CD: Jenkins, Docker Swarm on AWS, e2e testing.
+        \item Fully automated the Polysun release pipeline.
+        \item Internal cloud infrastructure (e.g., licensing, sales automation, ...)\newline
+          \emph{Apache Camel}.
+        \item Developer tooling (CLI applications in Haskell, Python).
+          \\
+      \end{itemize}
+    }
+  \end{adjustwidth}
+}
+{}
+
+\cventry{
+  2013\textendash 2017}{Research assistant}
+  { \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pvprog/}{PVprog},
+    \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/pv-store/}{PVstore},
+    \href{https://pvspeicher.htw-berlin.de/forschungsprojekte/twinpower/}{TwinPower}
+  }{HTW Berlin}{}
+  { Development of forecast-based operational strategies for PV storage systems.\newline
+    Optimisation of PV systems with batteries and heat pumps.\newline
+   Implementation of simulation models in Matlab.
+  }{}
+
+\cventry{2011}{Factory worker}{}{Brose Fahrzeugteile, Leuwico, Lasco Umformtechnik}{}{}{}
+\cventry{2010}{Math \& english tutor}{}{Studentenring Coburg}{}{}{}
+\cventry{2009}{Social service}{}{reha Gmbh}{}{}{}
+% \newpagewithfooter
+
+\section{\faIcon{graduation-cap} Education}
+
+\cventry{2016\textendash 2017}{Master of Science - Renewable Energy Systems}{\newline Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
+\cvitem{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{\faIcon{book} Thesis}}{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Development of model-based control applications compliant with IEC~61499 for building energy systems with a focus on photovoltaics}}{}{}{}{}
+\cvitem{Summary}{Development of intelligent control applications for PV, battery and heat pump systems in compliance with IEC~61499. Development of communication interfaces for simulation tools such as Polysun and Matlab. Validation via co-simulations. Extension of the runtime environment (4diac-RTE) with a REST communication interface and set-up of a field test.}
+
+\cventry{2012\textendash 2016}{Bachelor of Science - Renewable Energy Systems}{\newline Hochschule für Technik und Wirtschaft}{HTW Berlin}{}{GPA: A (with honours), HTW Berlin.}{}
+\cvitem{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{\faIcon{book} Thesis}}{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{Optimisation of grid feed-in from PV storage systems distributed across Germany using forecast-based operating strategies}}{}{}{}{}
+\cvitem{Summary}{Modelling and highly parallel CUDA simulation of 46126 PV storage systems distributed across Germany. Examination of the cumulated influence of various operational strategies and optimisation of forecasting- and control algorithms regarding self-sufficiency and grid integration.}
+
+% \newpagewithfooter
 \section{\faIcon{mountain} Interests}
 
 \cvitem{Professional}{
@@ -385,47 +395,17 @@ and taking ownership of quality-focused delivery through \textbf{test automation
 }
 \cvitem{Leisure}{Cooking, urban gardening, running, cycling, hiking}
 
+\section{\faIcon{user} Personal}
+
+\cvitem{Date of birth}{1989/04/18}
+\cvitem{Nationality}{United Kingdom + Germany}
+\cvitem{Swiss residence}{C permit}
+
 \section{\faIcon{language} Languages}
 
-\cvitem{English}{Bilingual native proficiency (UK citizen)}
+\cvitem{Native}{English + German}
 
-\cvitem{German}{Bilingual native proficiency (German citizen)}
-
-\cvitem{Swiss German}{Good comprehension (C permit)}
-
-\cvitem{French}{B1}
-
-% \section{Personal}
-%
-% \cvitem{Born 1989\-04\-18 in Filderstadt, Germany}
-%
-% \section{\faIcon{book} Publications}
-%
-% \cvitem{Conference paper}{Jakobi, M.; Kunath, L.; Witzig, A. \emph{\href{https://proceedings.ises.org/paper/eurosun2018/eurosun2018-0147-Jakobi.pdf}{BIM use-case: Model-based performance optimization.}} EuroSun international conference on solar energy for buildings and industry, Rapperswil, 2018.}
-%
-% \cvitem{Conference paper}{Jakobi, M.; Stöckli, U.; Tjaden, T.; Quaschning, Q. \emph{\href{http://proceedings.ises.org/paper/eurosun2018/eurosun2018-0151-Jakobi.pdf}{From simulation to reality: IEC 61499 compliant control applications for solar energy systems.}} EuroSun international conference on solar energy for buildings and industry, Rapperswil, 2018.}
-%
-% \cvitem{Conference paper}{Jakobi, M.; Stöckli, U.; Tjaden, T.; Quaschning, Q. \emph{\href{https://www.velasolaris.com/wp-content/uploads/2018/12/20180504_publikation_symposiumpv18_jakobi.pdf}{Von der Simulation zur Realität: IEC 61499 konforme Regelanwendungen für Solare Energiesysteme.}} Symposium photovoltaische Solarenergie, Bad Staffelstein, 2018.}
-%
-% \cvitem{Thesis}{Jakobi, M.: \emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2017/11/Jakobi-2017-Development-of-model-based-control-applications-compliant-with-IEC-61499.pdf}{Development of model-based control applications compliant with IEC~61499 for building energy systems with a focus on photovoltaics.}} Master's thesis, Hochschule für
-% 	Technik und Wirtschaft, Berlin, 2017.}
-%
-% \cvitem{Thesis}{Jakobi, M.: \emph{\href{http://pvspeicher.htw-berlin.de/wp-content/uploads/2014/05/JAKOBI-2015-Optimierung-des-Netzeinspeiseverhaltens-von-deutschlandweit-verteilten-PV-Speichersytemen-mit-prognosebasierten-Betriebsstrategien.pdf}{\textit{Optimierung des Netzeinspeiseverhaltens von deutschlandweit verteilten PV-Speichersystemen mit prognosebasierten Betriebsstrategien.}}} Bachelor's thesis, Hochschule für
-% Technik und Wirtschaft, Berlin, 2016.}
-%
-% \cvitem{Data \& code}{Jakobi, M.; Schmidt, M.; Anyangbe, F. \emph{\href{https://github.com/MrcJkb/lfpBattery/blob/master/Documentation/lfpBattery_Documentation.pdf}{Cell resolved Matlab OOP model of a lithium iron phosphate battery pack}}, TU Berlin, 2017.}
-%
-% \cvitem{Co-author}{Weniger, J.; Bergner, J.; Beier, D.; Jakobi, M.; Tjaden, T.; Quaschning,
-% Q.: \emph{\href{https://pvspeicher.htw-berlin.de/wp-content/uploads/2014/04/WENIGER-2015-Grid-Feed-in-Behavior-of-Distributed-PV-Battery-Systems.pdf}{Grid Feed-in Behavior of Distributed PV Battery Systems}}.
-% 30th European Photovoltaic Solar Energy Conference and Exhibition,
-% Hamburg, 2015. }
-%
-% \section{\faIcon{user} Leisure-time activities}
-%
-% \cvitem{Sports}{{\small{}Running, cycling, hiking}}
-% \cvitem{Cooking}{}
-% \cvitem{Urban gardening}{}
-%
+\cvitem{B1}{French}
 
 \fi
 \end{document}
